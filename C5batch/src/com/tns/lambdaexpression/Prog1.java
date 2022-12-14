@@ -10,15 +10,12 @@ public class Prog1 {
 
 	public static void main(String[] args)
 	{
-		Lambda obj=()->{
-			System.out.println("i m the Trainer");
-			System.out.println("i m the Trainer");
-			System.out.println("i m the Trainer");
-			System.out.println("i m the Trainer");
-			System.out.println("i m the Trainer");
-		};
-		obj.disp();
-
+		
+	new Thread(()->
+			
+			{
+				System.out.println("This is one Thread");
+			}).start();
 	}
 
 }
