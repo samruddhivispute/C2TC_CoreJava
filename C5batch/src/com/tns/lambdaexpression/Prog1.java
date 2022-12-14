@@ -2,7 +2,7 @@ package com.tns.lambdaexpression;
 
 interface Lambda
 {
-	public void disp();
+	abstract public void disp(int x);
 	
 }
 
@@ -10,12 +10,11 @@ public class Prog1 {
 
 	public static void main(String[] args)
 	{
-		
-	new Thread(()->
-			
-			{
-				System.out.println("This is one Thread");
-			}).start();
+		Lambda obj=(int x)->{
+			System.out.println("value of x is: "+x);
+		};
+		obj.disp(56);
+	
 	}
 
 }
